@@ -15,53 +15,141 @@ public class MainPageZapGuru {
 
 
     /**
-     * @params  locationButton обозначение локации
+     * @params locationButton обозначение локации
      */
     @FindBy(css = "div.b-region-col")
     private WebElement locationButton;
 
-    @FindBy(css = "")
-    private WebElement dropdownToClients; // выпадающий список Клиентам
+    /**
+     * @params dropdownToClients выпадающий список Клиентам
+     */
+
+    @FindBy(css = "li.dropdown")
+    private WebElement dropdownToClients;      //!!!
+
+    /**
+     * @params buttonContacts кнопка Контакты
+     */
+
+    @FindBy(xpath = "//*[@href='/contacts']")   //!!!
+    private WebElement buttonContacts;
+
+    /**
+     * @params vinQueries кнопка Vin Запрос
+     */
+
+    @FindBy(css = "//*[contains(text(),'Vin запрос')]")
+    private WebElement vinQueries;
+
+    /**
+     * @params buttonLogin кнопка Вход
+     */
+
+    @FindBy(css = "//*[@href='/login']")
+    private WebElement buttonLogin;
+
+    /**
+     * @params buttonRegistration кнопка Регистрация
+     */
+
+    @FindBy(css = "//*[@href='/customers/new']")
+    private WebElement buttonRegistration;         //!!!
+
+
+    /**
+     * @params buttonBasket Кнопка 'Корзина'
+     */
+
+    @FindBy(css = "a.b-basket-link")
+    private WebElement buttonBasket;
+
+
+    /**
+     * @params  buttonCatalogToggler каталог товаров
+     */
+
+    @FindBy(css = "//*[@class='b-catalog-toggler']")
+    private WebElement buttonCatalogToggler;
+
+    /**
+     * @params inputSearch Поле Поиск
+     */
+
+    @FindBy(css = "//*[@class='b-input-search']")
+    private WebElement inputSearch;
+
+    /**
+     * @params buttonFindInInputSearch Кнопка 'Найти' в поле поиск
+     */
+
+    @FindBy(css = "//button[@class='b-btn-send']")
+    private WebElement buttonFindInInputSearch;
+
+    /**
+     * @params buttonReviews посмотреть все отзывы
+     */
+
+    @FindBy(css = "//*[@class='b-show-all-reviews']")
+    private WebElement buttonReviews;
+
+    /**
+     * @params  fieldNameInFooter  поле 'Имя' в футере
+     */
+
+    @FindBy(css = "//input[@name='review[name]']")
+    private WebElement fieldNameInFooter;
+
+
+    /**
+     * @params  fieldCityInFooter поле 'Город' в футере
+     */
+
+    @FindBy(css = "//input[@name='review[city]']")
+    private WebElement fieldCityInFooter;
+
+
+    /**
+     * @params fieldTextArea поле 'Сообщение' в футере
+     */
+
+    @FindBy(css = "//textarea[@name='review[body]']")
+    private WebElement fieldTextArea;
+
+
+    /**
+     * @params buttonVKInFooter Кнопка ВК в футере
+     */
 
     @FindBy(css = "")
-    private WebElement buttonContacts; // кнопка Контакты
+    private WebElement buttonVKInFooter;
+
+    /**
+     * @params buttonTelegramInFooter Кнопка Телега в футере
+     */
 
     @FindBy(css = "")
-    private WebElement vinQueries;  // кнопка Vin Запрос
+    private WebElement buttonTelegramInFooter;
+
+    /**
+     * @params buttonViberInFooter Кнопка Вайбер в футере
+     */
 
     @FindBy(css = "")
-    private WebElement buttonLogin;  // кнопка Вход
+    private WebElement buttonViberInFooter;
 
-    @FindBy(css = "")
-    private WebElement buttonRegistration;  // кнопка Регистрация
+    /**
+     * @params  buttonWhatsUpInFooter  Кнопка Вацап в футере
+     */
 
-    @FindBy(css = "")
-    private WebElement buttonCatalogToggler; // каталог товаров
+    @FindBy(xpath = "//img[@data-src='/images/whatsapp.svg']")
+    private WebElement buttonWhatsUpInFooter;                          // !!!!
 
-    @FindBy(css = "")
-    private WebElement inputSearch; // Поле Поиск
+    /**
+     * @params buttonCallBackRequest Кнопка Заказать звонок
+     */
 
-    @FindBy(css = "")
-    private WebElement buttonFindInInputSearch; // Кнопка найти в поле поиск
+    @FindBy(xpath = "//*[@data-toggle='modal']")
+    private WebElement buttonCallBackRequest;
 
-    @FindBy(css = "")
-    private WebElement buttonToClientsInFooter; // кнопка клиента в футере
 
-    @FindBy(css = "")
-    private WebElement buttonContactsInFooter;// Кнопка Контакты в футере
-
-    @FindBy(css = "")
-    private WebElement buttonVKInFooter; // Кнопка ВК в футере
-
-    @FindBy(css = "")
-    private WebElement buttonTelegramInFooter; // Кнопка Телега в футере
-
-    @FindBy(css = "")
-    private WebElement buttonViberInFooter; // Кнопка Вайбер в футере
-
-    @FindBy(css = "")
-    private WebElement buttonWhatsUpInFooter; // Кнопка Вацап в футере
-
-    @FindBy(css = "")
-    private WebElement buttonCallBackRequest; // Кнопка Заказать звонок
 }
