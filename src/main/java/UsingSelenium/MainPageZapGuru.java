@@ -5,11 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainPageZapGuru {
-    WebDriver driver = new ChromeDriver();
 
-    public MainPageZapGuru() {
+    public MainPageZapGuru(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
@@ -65,7 +65,7 @@ public class MainPageZapGuru {
 
 
     /**
-     * @params  buttonCatalogToggler каталог товаров
+     * @params buttonCatalogToggler каталог товаров
      */
 
     @FindBy(css = "//*[@class='b-catalog-toggler']")
@@ -93,7 +93,7 @@ public class MainPageZapGuru {
     private WebElement buttonReviews;
 
     /**
-     * @params  fieldNameInFooter  поле 'Имя' в футере
+     * @params fieldNameInFooter  поле 'Имя' в футере
      */
 
     @FindBy(css = "//input[@name='review[name]']")
@@ -101,7 +101,7 @@ public class MainPageZapGuru {
 
 
     /**
-     * @params  fieldCityInFooter поле 'Город' в футере
+     * @params fieldCityInFooter поле 'Город' в футере
      */
 
     @FindBy(css = "//input[@name='review[city]']")
@@ -138,7 +138,7 @@ public class MainPageZapGuru {
     private WebElement buttonViberInFooter;
 
     /**
-     * @params  buttonWhatsUpInFooter  Кнопка Вацап в футере
+     * @params buttonWhatsUpInFooter  Кнопка Вацап в футере
      */
 
     @FindBy(xpath = "//img[@data-src='/images/whatsapp.svg']")
@@ -151,5 +151,82 @@ public class MainPageZapGuru {
     @FindBy(xpath = "//*[@data-toggle='modal']")
     private WebElement buttonCallBackRequest;
 
+    public WebElement getLocationButton() {
+        return locationButton;
+    }
 
+    public WebElement getDropdownToClients() {
+        return dropdownToClients;
+    }
+
+    public WebElement getButtonContacts() {
+        return buttonContacts;
+    }
+
+    public WebElement getVinQueries() {
+        return vinQueries;
+    }
+
+    public WebElement getButtonLogin() {
+        return buttonLogin;
+    }
+
+    public WebElement getButtonRegistration() {
+        return buttonRegistration;
+    }
+
+    public WebElement getButtonBasket() {
+        return buttonBasket;
+    }
+
+    public WebElement getButtonCatalogToggler() {
+        return buttonCatalogToggler;
+    }
+
+    public WebElement getInputSearch() {
+        return inputSearch;
+    }
+
+    public WebElement getButtonFindInInputSearch() {
+        return buttonFindInInputSearch;
+    }
+
+    public WebElement getButtonReviews() {
+        return buttonReviews;
+    }
+
+    public WebElement getFieldNameInFooter() {
+        return fieldNameInFooter;
+    }
+
+    public WebElement getFieldCityInFooter() {
+        return fieldCityInFooter;
+    }
+
+    public WebElement getFieldTextArea() {
+        return fieldTextArea;
+    }
+
+    public WebElement getButtonVKInFooter() {
+        return buttonVKInFooter;
+    }
+
+    public WebElement getButtonTelegramInFooter() {
+        return buttonTelegramInFooter;
+    }
+
+    public WebElement getButtonViberInFooter() {
+        return buttonViberInFooter;
+    }
+
+    public WebElement getButtonWhatsUpInFooter() {
+        return buttonWhatsUpInFooter;
+    }
+
+    public WebElement getButtonCallBackRequest() {
+        return buttonCallBackRequest;
+    }
+     public void click_Location(){
+        locationButton.click();
+     }
 }
