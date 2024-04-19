@@ -3,7 +3,9 @@ package UsingSelenium;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -120,29 +122,29 @@ public class MainPageZapGuru {
      * @params buttonVKInFooter Кнопка ВК в футере
      */
 
-    @FindBy(css = "")
+ @FindBy(xpath = "//footer[@class='b-footer']//a[@href='https://vk.com/zapguru_auto']")
     private WebElement buttonVKInFooter;
 
     /**
      * @params buttonTelegramInFooter Кнопка Телега в футере
      */
 
-    @FindBy(css = "")
+    @FindBy(css = "//footer[@class='b-footer']//a[@href='tg://resolve?domain=ZapGuru']")
     private WebElement buttonTelegramInFooter;
 
     /**
      * @params buttonViberInFooter Кнопка Вайбер в футере
      */
 
-    @FindBy(css = "")
+    @FindBy(css = "viber://chat?number=%2B79087102910/")
     private WebElement buttonViberInFooter;
 
     /**
      * @params buttonWhatsUpInFooter  Кнопка Вацап в футере
      */
 
-    @FindBy(xpath = "//img[@data-src='/images/whatsapp.svg']")
-    private WebElement buttonWhatsUpInFooter;                          // !!!!
+    @FindBy(xpath = "https://api.whatsapp.com/send?phone=79087102910")
+    private WebElement buttonWhatsUpInFooter;
 
     /**
      * @params buttonCallBackRequest Кнопка Заказать звонок
